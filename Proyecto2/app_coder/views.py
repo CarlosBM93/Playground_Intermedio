@@ -31,3 +31,9 @@ def cursos(self):
 
 def entregables(self):
     return render(self,"Entregables.html")
+
+def cursoFormulario(request):
+
+    print('method: ',request.method)
+    return render(request, "cursoFormulario.html")
+
