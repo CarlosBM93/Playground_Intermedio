@@ -5,14 +5,12 @@
 
 {% block BloqueQueCambia %}
 
-            <form action="{% url 'CursoFormulario' %}" method="POST">{% csrf_token %}
+            <form action="{% url 'cursoFormulario' %}" method="POST">{% csrf_token %}
 
-                <p>Curso: <input type="text" name="curso"></p>
-
-                <p>Camada: <input type="number" name="camada"></p>
+                {{miFormulario.as_p}}
 
                 <input type="submit" value="Enviar">
-                
+
             </form>
 
             

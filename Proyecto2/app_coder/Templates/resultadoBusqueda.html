@@ -1,0 +1,27 @@
+
+{% extends 'padre.html' %}
+
+{%load static%}
+
+{% block BloqueQueCambia %}
+
+    <p>Estamos buscando los cursos con camada de numero: {{camada}}</p>       
+    
+    
+    {% if cursos %}
+        <ul>
+            
+            {% for curso in cursos %}
+                <li>
+                    {{curso.nombre}}-{{curso.camada}}
+                </li>
+            {% endfor %}
+                
+
+        </ul>
+    {% else %}
+        <p> No hubo coincidencias</p>
+    {% endif %}
+        
+
+{% endblock BloqueQueCambia %}

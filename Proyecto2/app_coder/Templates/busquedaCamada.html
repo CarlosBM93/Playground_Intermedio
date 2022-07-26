@@ -1,0 +1,18 @@
+
+{% extends 'padre.html' %}
+
+{%load static%}
+
+{% block BloqueQueCambia %}
+
+            <form action="{% url 'buscar' %}" method="GET">{% csrf_token %}
+
+                <p><input type="text" name="camada"></p>
+
+                <input type="submit" value="buscar">
+
+            </form>
+
+            
+
+{% endblock BloqueQueCambia %}
